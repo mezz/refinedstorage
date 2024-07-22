@@ -26,7 +26,7 @@ I'll be telling what you need this for in a second, bear with me.
 
 After crafting a xref:network-card.adoc[], craft a xref:network-receiver.adoc[] and place it in the area far away from your base. 
 
-If the receiver was added to an existing network, remove the controller from that network, the receiver will act as a controller.
+If the xref:network-receiver.adoc[] was added to an existing network, remove the xref:../networking/controller.adoc[] from that network, the receiver will act as a controller.
 
 Take the xref:network-card.adoc[] and right click it on the xref:network-receiver.adoc[].
 
