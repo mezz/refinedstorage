@@ -24,7 +24,9 @@ Simply craft a xref:network-transmitter.adoc[] and connect it to your Refined St
 Next up, craft a xref:network-card.adoc[].
 I'll be telling what you need this for in a second, bear with me.
 
-After crafting a xref:network-card.adoc[], craft a xref:network-receiver.adoc[] and place it in the area far away from your base.
+After crafting a xref:network-card.adoc[], craft a xref:network-receiver.adoc[] and place it in the area far away from your base. 
+
+If the receiver was added to an existing network, remove the controller from that network, the receiver will act as a controller.
 
 Take the xref:network-card.adoc[] and right click it on the xref:network-receiver.adoc[].
 
