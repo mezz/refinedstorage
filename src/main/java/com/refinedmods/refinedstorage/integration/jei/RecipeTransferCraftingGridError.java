@@ -1,5 +1,6 @@
 package com.refinedmods.refinedstorage.integration.jei;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.recipe.transfer.IRecipeTransferError;
 import net.minecraft.ChatFormatting;
@@ -39,9 +40,12 @@ public class RecipeTransferCraftingGridError implements IRecipeTransferError {
 
     @Override
     public void showError(GuiGraphics graphics, int mouseX, int mouseY, IRecipeSlotsView recipeSlotsView, int recipeX, int recipeY) {
-        graphics.pose().translate(recipeX, recipeY, 0);
+        PoseStack poseStack = graphics.pose();
+        poseStack.pushPose();
+        poseStack.translate(recipeX, recipeY, 0);
         List<Component> message = drawIngredientHighlights(graphics, recipeX, recipeY);
         graphics.renderComponentTooltip(Minecraft.getInstance().font, message, mouseX, mouseY);
+        poseStack.popPose();
     }
 
     protected List<Component> drawIngredientHighlights(GuiGraphics graphics, int recipeX, int recipeY) {
